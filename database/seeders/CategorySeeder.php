@@ -19,23 +19,27 @@ class CategorySeeder extends Seeder
             [
                 'name' => 'Web Desing',
                 'slug' => Str::slug('Web Desing')
-            ],
+            ]);
+            Category::create(
             [
                 'name' => 'Web Dev',
                 'slug' => Str::slug('Web Dev')
-            ],
+            ]);
+            Category::create(
             [
                 'name' => 'Programming',
                 'slug' => Str::slug('Programming')
-            ],
+            ]);
+            Category::create(
             [
                 'name' => 'Mobille Apps',
                 'slug' => Str::slug('Mobille Apps')
-            ],
+            ]);
+            Category::create(
             [
                 'name' => 'Flliter',
                 'slug' => Str::slug('Flliter')
-            ],
-        );
+            ]);
+            
     }
 }
