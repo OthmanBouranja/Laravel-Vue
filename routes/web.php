@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth', 'verified')->get('/', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
