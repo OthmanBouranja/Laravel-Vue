@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Collective;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,8 @@ class CollectiveController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('collectives.create', compact('categories'));
     }
 
     /**
