@@ -28,8 +28,7 @@
                             <form id="logoutForm" action="{{route('logout')}}" method="post">
                                 @csrf
                             </form>
-                            <a class="dropdown-item" onclick="document.getElementbyId('logoutForm').submit()"
-                                href="#">Logout</a>
+                            <a class="dropdown-item" onclick="document.getElementById('logoutForm').submit()">Logout</a>
                         </li>
                         @endauth
 
