@@ -15,7 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+// Route::middleware('auth','verified')->group(function(){
+
+// });
+
+Route::resource('collectives', 'CollectiveController');
+Route::resource('questions', 'QuestionController');
 
 // Route::get('/index',[ProductController::class,'index'])->name('all.product');

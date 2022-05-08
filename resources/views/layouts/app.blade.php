@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    @include('layouts.navbar')
     @yield('content')
 
     <!-- Optional JavaScript; choose one of the two! -->
