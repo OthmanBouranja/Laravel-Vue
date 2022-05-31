@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="vue-app">
+        <h1>{{ name.length > 0 ? name : 'name is to shoert' }}</h1>
+        <p>Your age {{ age }}</p>
+        <ul>
+            <li v-for="skil in skills">
+                {{skil}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="(skil, index) in skills">
+                {{index}} => {{skil}}
+            </li>
+        </ul>
+        <ul>
+            <li v-for="test in competdTest">
+                {{test.firstName}} | {{test.testResult}}
+            </li>
+        </ul>
+        <!-- <button @click="getDayOfToday"> Get Day Of Today Using JS  </button> -->
+    </div>
+
+
+
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#vue-app',
+            data: {
+                name: 'othmane',
+                age: 23,
+                days: 'today',
+                skills: ['HTML', 'CSS', 'JS', 'vue', 'boostrap'],
+                isSub: false,
+                competdTest: [{
+                    firstName: "boug",
+                    testResult: '40%'
+                }, {
+                    firstName: "web",
+                    testResult: '70%'
+                }, {
+
+                    firstName: "site",
+                    testResult: '90%'
+                }]
+            },
+            methods: {
+                tourAgeInDay: function() {
+                        return 'Your Age In day id ' + this.age * 365
+                    }
+                    // getDayOfToday: function() {
+                    //     return this.days = Date();
+                    // }
+            }
+        })
+    </script>
+</body>
+
+</html>
